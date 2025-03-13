@@ -1,0 +1,241 @@
+.footer {
+    overflow: hidden;
+    
+    &__wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    &__catalog {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        height: 423px;
+        padding: 29px 0 60px 0;
+        border-bottom: 1px solid #838b8e;
+    }
+
+    &__list-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 256px;
+
+        &:nth-child(1) {
+            .footer__list {
+                margin: 0 0 22px 0;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 542px;
+
+            .footer__list {
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-flow: row wrap;
+            }
+
+            .footer__list-item {
+                width: 47%;
+            }
+        }
+    }
+
+    &__list-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0 0 20px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: column wrap;
+
+        &:nth-child(2) {
+            height: auto;
+        }
+    }
+
+    &__list-item {
+
+        a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+        }
+    }
+
+    &__list-item:not(:last-child) {
+        margin: 0 0 16px 0;
+    }
+
+    &__show-more-link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 137%;
+    }
+
+    &__dest {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    &__dest-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0 0 19px 0;
+    }
+
+    &__contacts-list {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 0 0 32px 0;
+    }
+
+    &__contacts-item {
+        display: flex;
+        flex-flow: row nowrap;
+
+        &:nth-child(1) {
+
+            a {
+                font-size: 18px;
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            .footer__contacts-icon {
+                margin: 0 8px 0 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 15px 0
+        }
+    }
+
+    &__contacts-icon {
+        @include image-wrapper;
+        width: 24px;
+        height: 24px;
+        margin: 0 5px 0 0;
+
+        a {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 137%;
+        }
+    }
+
+    &__links-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0 0 16px 0;
+    }
+
+    &__links-list {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    &__link:not(:last-child) {
+        margin: 0 13px 0 0;
+    }
+
+    &__dest {
+        display: inline-flex;
+        margin: 0 0 29px 0;
+    }
+
+    &__dest-image {
+        @include image-wrapper;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px 0 0;
+    }
+
+    &__contacts-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0 0 15px 0;
+    }
+
+    &__legacy-and-rating {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 32px 0 0 0;
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+        }
+    }
+
+    &__legacy-text {
+        width: 800px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        margin: 24px 0 0 0;
+    }
+
+    &__rating-wrapper {
+        width: 256px;
+
+        span {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 143%;
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &__rating {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 4px 0;
+    }
+
+    &__rating-icon {
+        @include image-wrapper;
+        margin: 0 8px 0 0;
+    }
+
+    &__rating-value {
+        display: inline-flex;
+        margin: 1px 0 0 0;
+    }
+
+    &__rating-stars {
+        display: flex;
+        flex-flow: row nowrap;
+
+        &:not(:last-child) {
+            margin: 0 4px 0 0;
+        }
+    }
+
+    &__agreement {
+        width: 100%;
+        margin: 32px 0 0 0;
+
+        a {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 143%;
+            color: $black;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    
+}

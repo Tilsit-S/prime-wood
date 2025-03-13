@@ -1,0 +1,12 @@
+.slide {
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.slide:not(:last-child) {
+    margin: 0 32px 0 0;
+}

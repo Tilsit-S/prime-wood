@@ -1,0 +1,85 @@
+@mixin breakpoint {
+    width: 1428px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @media (max-width: 1470px) {
+        width: 100%;
+        padding: 32px 40px;
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+    @media (max-width: 764px) {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@mixin font-setting($size, $line-height, $font-width, $font-color) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $font-width;
+    color: $font-color;
+}
+
+@mixin main-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 114%;
+    color: $black;
+
+    @media (max-width: $tablet-width) {
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 43px;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: uppercase;
+    }
+}
+
+@mixin second-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+}
+
+@mixin description {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+
+    @media (max-width: $tablet-width) {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@mixin image-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}

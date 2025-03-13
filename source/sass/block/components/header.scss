@@ -1,0 +1,243 @@
+.header {
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+
+    &__wrapper {
+        padding: 26px 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 1020px) {
+            
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 245px;
+        margin: 0 10px 0 0;
+
+        svg {
+            width: 167px;
+            margin: 0 10px 0 0;
+            flex-shrink: 0;
+        }
+    }
+    
+    &__logo-description {
+        position: relative;
+        padding: 0 0 0 10px;
+        font-weight: 400;
+        line-height: 110%;
+
+        &::before {
+            position: absolute;
+            display: block;
+            top: 5px;
+            left: 0px;
+            content: "";
+            width: 1px;
+            height: 80%;
+            background-color: $green;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 68%;
+    }
+
+    &__navigation-list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin: 0 10px 0 0;
+        gap: 0 32px;
+    }
+
+    &__navigation-item {
+        a {
+            display: block;
+            height: 100%;
+            padding: 15px 5px;
+        }
+    }
+
+    &__navigation-contacts {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 5px 0 0 0;
+        margin: 0 7px 0 0;
+    }
+
+    &__navigation-contact-link:not(:last-child) {
+        margin: 0 33px 0 0;
+    }
+
+    &__navigation-contact-link:first-child {
+        margin: 0 24px 0 0;
+    }
+
+    &__navigation-contact-link {
+        position: relative;
+
+        a {
+            display: block;
+            height: 100%;
+            padding: 15px 5px 10px 5px;
+
+            &:hover {
+                svg {
+                    transition: 0.3s ease-in-out;
+                    path {
+                        fill: $blue;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .burger-btn {
+        display: none;
+    }
+
+    .pop-up {
+        display: none;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .header {
+
+        &__button {
+            position: relative;
+            display: block;
+            border: none;
+            background: none;
+            font-size: 0;
+        }
+
+        .burger-btn {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+
+        .pop-up {
+            display: none;
+            z-index: 4;
+
+            &.show {
+                display: block;
+            }
+
+            @media (max-width: 767px) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 55%;
+                padding: 45px 40px 22px 26px;
+                background: $white;
+            }
+
+            @media (max-width: 550px) {
+                top: 0;
+                right: 0;
+                width: 420px;
+                padding: 45px 40px 22px 26px;
+            }
+
+            @media (max-width: 420px) {
+                width: 100%;
+            }
+
+            &__burger-btn-close {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 25px;
+                height: 25px;
+                padding: 0;
+                border: none;
+                background-color: transparent;
+
+                &::after,
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 8px;
+                    background-color: red;
+
+                    &:active,
+                    &:hover {
+                        color: $red;
+                    }
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+            }
+
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .visually-hidden {
+                position: absolute;
+                overflow: hidden;
+            }
+
+            &__link {
+                display: flex;
+                flex-direction: row;
+                font-size: 18px;
+                line-height: 24px;
+                padding-top: 22px;
+
+                a:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &__navigation-contact-link:first-child {
+            display: none;
+        }
+
+        &__navigation-list {
+            display: none;
+        }
+    }
+}

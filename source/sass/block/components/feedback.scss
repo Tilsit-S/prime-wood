@@ -1,0 +1,97 @@
+.feedback {
+    overflow: hidden;
+    margin: 0 0 20px 0;
+
+    &__wrapper {
+        padding: 40px 0 0 0;
+    }
+
+    .container {
+        width: 1408px;
+        background: #EAECEE;
+        border-radius: 20px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 117%;
+        text-align: center;
+        margin: 0 0 48px 0;
+    }
+
+    .form {
+        
+        width: 42.5%;
+        margin: 0 auto;
+        padding: 0 0 40px 0;
+
+        &__datd-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            flex-shrink: 0;
+            margin: 0 0 23px 0;
+        }
+
+        &__profile-wrapper,
+        &__phone-wrapper,
+        &__mail-wrapper {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        &__profile-wrapper {
+            width: 100%;
+            margin: 0 0 24px 0;
+        }
+
+        &__phone-wrapper {
+            width: 48%;
+            margin: 0 10px 0 0;
+        }
+
+        &__mail-wrapper {
+            width: 48%;
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0;
+            width: 202px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 133%;
+            padding: 16px 10px;
+            margin: 0 auto;
+            margin-bottom: 16px;
+            border: none;
+            border-radius: 16px;
+            color: $white;
+            background-color: $green;
+
+            &:hover {
+                
+            }
+        }
+
+        &__legacy {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            text-align: center;
+            color: #282828;
+
+            a {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                color: #282828;
+                text-decoration: underline;
+            }
+        }
+    }
+}

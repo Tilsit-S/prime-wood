@@ -1,0 +1,14 @@
+@import "normalize", "fonts", "variables", "mixins", "global", "animation";
+
+// components
+
+@import "block/components/header.scss", "block/components/destination.scss",
+        "block/components/apartments.scss", "block/components/features.scss",
+        "block/components/feedback.scss", "block/components/footer.scss";
+
+// subcomponents
+
+@import "block/subcomponents/modal-overlay.scss", "block/subcomponents/notice.scss",
+        "block/subcomponents/slide.scss";
+
+//@import "block/subcomponents/card.scss";
