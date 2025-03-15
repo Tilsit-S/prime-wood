@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('.first-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -20,7 +20,7 @@ $(document).ready(function(){
         ],
     }
     );
-});
+});*/
 
 $(document).ready(function(){
     $('.second-slider').slick({

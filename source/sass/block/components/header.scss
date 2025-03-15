@@ -5,6 +5,10 @@
 
     &__wrapper {
         padding: 26px 10px;
+
+        @media (max-width: 1024px) {
+            padding: 20px 35px;
+        }
     }
 
     .container {
@@ -12,8 +16,9 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        @media (max-width: 1020px) {
-            
+
+        @media (max-width: 1024px) {
+
         }
     }
 
@@ -29,9 +34,18 @@
             width: 167px;
             margin: 0 10px 0 0;
             flex-shrink: 0;
+
+            @media (max-width: 1024px) {
+                width: 60%;
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            width: 200px;
         }
     }
-    
+
     &__logo-description {
         position: relative;
         padding: 0 0 0 10px;
@@ -47,6 +61,10 @@
             width: 1px;
             height: 80%;
             background-color: $green;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 12px;
         }
     }
 
@@ -64,6 +82,11 @@
         justify-content: space-between;
         margin: 0 10px 0 0;
         gap: 0 32px;
+
+        @media (max-width: 1024px) {
+            width: 261px;
+            gap: 0 8px;
+        }
     }
 
     &__navigation-item {
@@ -71,6 +94,12 @@
             display: block;
             height: 100%;
             padding: 15px 5px;
+
+            @media (max-width: 1024px) {
+                font-size: 12px;
+                line-height: 150%;
+                color: #282828;
+            }
         }
     }
 
@@ -84,6 +113,10 @@
 
     &__navigation-contact-link:not(:last-child) {
         margin: 0 33px 0 0;
+
+        @media (max-width: 1024px) {
+            margin: 0 20px 0 0;
+        }
     }
 
     &__navigation-contact-link:first-child {
@@ -107,6 +140,11 @@
                     }
                 }
             }
+
+            @media (max-width: 1024px) {
+                font-size: 12px;
+                line-height: 150%;
+            }
         }
     }
 
@@ -120,124 +158,4 @@
 }
 
 @media (max-width: $tablet-width) {
-    .header {
-
-        &__button {
-            position: relative;
-            display: block;
-            border: none;
-            background: none;
-            font-size: 0;
-        }
-
-        .burger-btn {
-            display: block;
-            width: 20px;
-            height: 20px;
-        }
-
-        .pop-up {
-            display: none;
-            z-index: 4;
-
-            &.show {
-                display: block;
-            }
-
-            @media (max-width: 767px) {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 55%;
-                padding: 45px 40px 22px 26px;
-                background: $white;
-            }
-
-            @media (max-width: 550px) {
-                top: 0;
-                right: 0;
-                width: 420px;
-                padding: 45px 40px 22px 26px;
-            }
-
-            @media (max-width: 420px) {
-                width: 100%;
-            }
-
-            &__burger-btn-close {
-                position: absolute;
-                top: 30px;
-                right: 30px;
-                width: 25px;
-                height: 25px;
-                padding: 0;
-                border: none;
-                background-color: transparent;
-
-                &::after,
-                &::before {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    border-radius: 8px;
-                    background-color: red;
-
-                    &:active,
-                    &:hover {
-                        color: $red;
-                    }
-                }
-
-                &::after {
-                    transform: rotate(-45deg);
-                }
-
-                &::before {
-                    transform: rotate(45deg);
-                }
-            }
-
-            &__wrapper {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            &__list {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 25px;
-            }
-
-            .visually-hidden {
-                position: absolute;
-                overflow: hidden;
-            }
-
-            &__link {
-                display: flex;
-                flex-direction: row;
-                font-size: 18px;
-                line-height: 24px;
-                padding-top: 22px;
-
-                a:first-child {
-                    margin-right: 10px;
-                }
-            }
-        }
-
-        &__navigation-contact-link:first-child {
-            display: none;
-        }
-
-        &__navigation-list {
-            display: none;
-        }
-    }
 }
