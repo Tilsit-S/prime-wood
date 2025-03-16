@@ -137,3 +137,109 @@
         }
     }
 }
+
+@media (max-width: $tablet-width) {
+    .feedback {
+        margin: 0 0 20px 0;
+        background: $white;
+    
+        &__wrapper {
+            padding: 32px 0 0 0;
+        }
+    
+        .container {
+            width: 89.8%;
+        }
+    
+        &__title {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 110%;
+            margin: 0 0 39px 0;
+        }
+    
+        .form {
+            width: 90.5%;
+            padding: 0 0 32px 0;
+    
+            &__datd-wrapper {
+                margin: 0 0 17px 0;
+            }
+    
+            &__profile-wrapper,
+            &__phone-wrapper,
+            &__mail-wrapper {
+            }
+    
+            &__profile-wrapper {
+                width: 100%;
+                margin: 0 0 24px 0;
+            }
+    
+            &__phone-wrapper {
+                width: 48%;
+                margin: 0 10px 0 0;
+            }
+    
+            &__mail-wrapper {
+                width: 48%;
+            }
+    
+            &__button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-shrink: 0;
+                width: 202px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 133%;
+                padding: 16px 10px;
+                margin: 0 auto;
+                margin-bottom: 16px;
+                border: none;
+                border-radius: 16px;
+                color: $white;
+                background-color: $green;
+    
+                &:hover {
+                    
+                }
+    
+                @media (max-width: 1024px) {
+                    width: 193px;
+                    padding: 17px 10px;
+                    font-size: 16px;
+                    line-height: 137%;
+                }
+            }
+    
+            &__legacy {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                text-align: center;
+                color: #282828;
+    
+                @media (max-width: 1024px) {
+                    font-size: 12px;
+                    line-height: 150%;
+                }
+    
+                a {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 143%;
+                    color: #282828;
+                    text-decoration: underline;
+    
+                    @media (max-width: 1024px) {
+                        font-size: 12px;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+    }
+}

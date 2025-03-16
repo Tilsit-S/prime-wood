@@ -60,3 +60,28 @@
         }
     }
 }
+
+@media (max-width: $tablet-width) {
+    .features {
+        margin: 0 0 44px 0;
+    
+        &__list {
+            flex-flow: row wrap;
+            gap: 30px 5px;
+        }
+    
+        &__item {
+            width: 48%;
+            min-height: 128px;
+            padding: 16px 100px 8px 100px;
+    
+            p {
+
+            }
+        }
+    
+        &__item-image {
+            margin: 0 0 10px 0;
+        }
+    }
+}

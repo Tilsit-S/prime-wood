@@ -21,3 +21,10 @@
 .slide:not(:last-child) {
     margin: 0 32px 0 0;
 }
+
+@media (max-width: $tablet-width) {
+    
+    .slide {
+        height: 202px;
+    }
+}

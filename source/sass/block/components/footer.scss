@@ -7,7 +7,12 @@
     }
 
     .container {
-        padding: 30px 48px;
+
+        padding: 0 10px;
+
+        @media (max-width: 1024px) {
+            padding: 30px 48px;
+        }
     }
 
     &__catalog {
@@ -398,5 +403,276 @@
 }
 
 @media (max-width: $tablet-width) {
+    .footer {
+        
+        &__wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+        }
     
+        .container {
+            padding: 22px 40px;
+        }
+    
+        &__catalog {
+            flex-flow: column nowrap;
+            height: 100%;
+            padding: 0 0 5px 0;
+        }
+    
+        &__list-wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+    
+            &:not(:last-child) {
+                margin: 0 0 33px 0;
+            }
+    
+            &:nth-child(1) {
+    
+                .footer__list {
+                    margin: 0 0 5px 0;
+                }
+            }
+    
+            &:nth-child(2) {
+                width: 100%;
+                margin: 0 0 7px 0;
+
+                .footer__list-title {
+                    margin: 0 0 26px 0;
+                }
+    
+                .footer__list {
+                    justify-content: flex-start;
+                }
+    
+                .footer__list-item {
+                    width: 29%;
+                }
+
+                .footer__list-item:not(:last-child) {
+                    margin: 0 0 16px 0;
+                }
+            }
+    
+            &:nth-child(3) {
+                margin: 0 0 26px 0;
+
+                .footer__list-item:not(:last-child) {
+                    margin: 0 0 16px 0;
+                }
+            }
+    
+            &:nth-child(4) {
+                flex-flow: row nowrap;
+                gap: 0 50px;
+            }
+        }
+    
+        &__dest-wrapper,
+        &__contacts,
+        &__links-wrapper {
+            width: 27%;
+        }
+    
+        &__list-title {
+            font-size: 18px;
+            line-height: 133%;
+            margin: 0 0 20px 0;
+        }
+    
+        &__list {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 2px 38px;
+    
+            &:nth-child(2) {
+                height: auto;
+                flex-flow: row wrap;
+            }
+        }
+    
+        &__list-item {
+            display: flex;
+            width: 28.8%;
+    
+            a {
+                font-size: 12px;
+                line-height: 150%;
+            }
+        }
+    
+        &__list-item:not(:last-child) {
+            margin: 0 0 14px 0;
+        }
+    
+        &__show-more-link {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 143%;
+        }
+    
+        &__dest {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    
+        &__dest-title {
+            font-size: 18px;
+            line-height: 133%;
+            margin: 0 0 15px 0;
+        }
+    
+        &__contacts-list {
+            margin: 0 0 23px 0;
+        }
+    
+        &__contacts-item {
+            display: flex;
+            flex-flow: row nowrap;
+    
+            &:nth-child(1) {
+    
+                a {
+                    font-size: 16px;
+                    line-height: 137%;
+                }
+            }
+    
+            &:nth-child(2),
+            &:nth-child(3) {
+    
+                .footer__contacts-icon {
+                    margin: 0 2px 0 0;
+                }
+    
+                a {
+                    font-size: 14px;
+                    line-height: 143%;
+                }
+            }
+    
+            &:not(:last-child) {
+                margin: 0 0 8px 0;
+            }
+        }
+    
+        &__contacts-icon {
+            @include image-wrapper;
+            width: 24px;
+            height: 24px;
+            margin: 0 5px 0 0;
+    
+            a {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 137%;
+            }
+        }
+    
+        &__links-title {
+            font-size: 18px;
+            line-height: 133%;
+            margin: 0 0 15px 0;
+        }
+    
+        &__links-list {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    
+        &__link:not(:last-child) {
+            margin: 0 13px 0 0;
+        }
+    
+        &__dest {
+            display: inline-flex;
+            margin: 0 0 29px 0;
+        }
+    
+        &__dest-image {
+            @include image-wrapper;
+            width: 20px;
+            height: 20px;
+            margin: 0 6px 0 0;
+        }
+    
+        &__dest-city {
+            font-size: 14px;
+            line-height: 143%;
+        }
+    
+        &__contacts-title {
+            font-size: 18px;
+            line-height: 133%;
+            margin: 0 0 16px 0;
+        }
+    
+        &__legacy-and-rating {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 0;
+    
+            p {
+                font-size: 12px;
+                line-height: 150%;
+            }
+        }
+    
+        &__legacy-text {
+            width: 58%;
+            margin: 24px 0 0 0;
+        }
+    
+        &__rating-wrapper {
+            padding: 27px 0 0 0;
+    
+            span {
+                font-size: 24px;
+                line-height: 117%;
+                margin: 0 10px 0 0;
+            }
+        }
+    
+        &__rating {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 4px 0;
+        }
+    
+        &__rating-icon {
+            @include image-wrapper;
+            margin: 0 8px 0 0;
+        }
+    
+        &__rating-value {
+            display: inline-flex;
+            margin: 1px 0 0 0;
+        }
+    
+        &__rating-stars {
+            display: flex;
+            flex-flow: row nowrap;
+    
+            &:not(:last-child) {
+                margin: 0 4px 0 0;
+            }
+        }
+    
+        &__agreement {
+            width: 100%;
+            font-size: 12px;
+            line-height: 150%;
+            margin: 25px 0 0 0;
+    
+            a {
+                font-size: 12px;
+                line-height: 150%;
+            }
+        }
+    }
 }

@@ -33,6 +33,10 @@ main {
     @media (max-width: 1024px) {
         padding: 0 0 84px 0;
     }
+
+    @media (max-width: $tablet-width) {
+        padding: 0 0 75px 0;
+    }
 }
 
 a {
@@ -128,6 +132,10 @@ input {
     @media (max-width: 1024px) {
         padding: 18px 20px 19px 16px;
     }
+
+    @media (max-width: $tablet-width) {
+        padding: 19px 20px 19px 16px;
+    }
     
     &::placeholder {
         font-weight: 400;
@@ -195,4 +203,8 @@ input {
     text-align: left;
     border-radius: 50%;
     border: none;
+
+    @media (max-width: $tablet-width) {
+        top: -11px;
+    }
 }
