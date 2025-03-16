@@ -37,6 +37,10 @@ main {
     @media (max-width: $tablet-width) {
         padding: 0 0 75px 0;
     }
+
+    @media (max-width: $tablet-width) {
+        padding: 0 0 60px 0;
+    }
 }
 
 a {
@@ -135,6 +139,10 @@ input {
 
     @media (max-width: $tablet-width) {
         padding: 19px 20px 19px 16px;
+    }
+
+    @media (max-width: $tablet-width) {
+        padding: 14px 20px 16px 16px;
     }
     
     &::placeholder {
