@@ -16,6 +16,10 @@
         background: #EAECEE;
         border-radius: 20px;
 
+        @media (max-width: 1500px) {
+            width: 93%;
+        }
+
         @media (max-width: 1024px) {
             width: 90.5%;
         }
@@ -260,6 +264,7 @@
             font-size: 32px;
             line-height: 100%;
             margin: 0 0 27px 0;
+            padding: 0 10px;
         }
     
         .form {

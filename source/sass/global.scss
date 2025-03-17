@@ -28,7 +28,7 @@ main {
     z-index: 1;
     padding: 0 0 100px 0;
     margin: 0 0 10px 0;
-    border-bottom: 1px solid #838b8e;
+    border-bottom: 1px solid $gray;
 
     @media (max-width: 1024px) {
         padding: 0 0 84px 0;
@@ -38,7 +38,7 @@ main {
         padding: 0 0 75px 0;
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $mobile-width) {
         padding: 0 0 60px 0;
     }
 }
@@ -142,6 +142,10 @@ input {
     }
 
     @media (max-width: $tablet-width) {
+        padding: 19px 20px 19px 16px;
+    }
+
+    @media (max-width: $mobile-width) {
         padding: 14px 20px 16px 16px;
     }
 
@@ -149,7 +153,7 @@ input {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
-        color: #838b8e;
+        color: $gray;
 
         @media (max-width: 1024px) {
             font-size: 14px;
